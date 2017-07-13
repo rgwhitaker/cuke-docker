@@ -15,6 +15,6 @@ defineSupportCode(function({Given, When, Then}) {
     Then('I should see {stringInDoubleQuotes}', function (text) {
         var xpath = "//*[contains(text(),'" + text + "')]";
         var condition = seleniumWebdriver.until.elementLocated({xpath: xpath});
-        return this.driver.wait(condition, 5000);
+        return this.driver.wait(condition, 10000);
     });
 });
